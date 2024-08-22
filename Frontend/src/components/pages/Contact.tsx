@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
             width="400"
             height="300"
             loading="lazy"
-            title="Map"
+            title="Map" 
           ></iframe>
         </figure>
       </section>

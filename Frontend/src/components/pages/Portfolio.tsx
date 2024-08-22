@@ -12,6 +12,60 @@ import ProjectImage8 from "../../assets/images/project-8.jpg";
 import ProjectImage9 from "../../assets/images/project-9.png";
 
 const Portfolio: React.FC = () => {
+
+  const datInfoPortifolio = [
+    {
+      title: "Finance",
+      area: "Web development",
+      imasge: ProjectImage1
+    },
+    {
+      title: "Finance",
+      area: "Web development",
+      imasge: ProjectImage2
+    },
+    {
+      title: "Fundo",
+      area: "Web development",
+      imasge: ProjectImage3
+    },
+    {
+      title: "Brawlhalla",
+      area: "Web development",
+      imasge: ProjectImage4
+    },
+    {
+      title: "DSM.",
+      area: "Web development",
+      imasge: ProjectImage4
+    },
+    {
+      title: "MetaSpark",
+      area: "Web development",
+      imasge: ProjectImage5
+    },
+    {
+      title: "Summary",
+      area: "Web development",
+      imasge: ProjectImage6
+    },
+    {
+      title: "Task Manager",
+      area: "Web development",
+      imasge: ProjectImage7
+    },
+    {
+      title: "Arrival",
+      area: "Web development",
+      imasge: ProjectImage8
+    },
+    {
+      title: "Arrival",
+      area: "Web development",
+      imasge: ProjectImage9
+    },
+  ];
+  
   return (
     <article className="portfolio active" data-page="portfolio">
       <header>
@@ -19,7 +73,7 @@ const Portfolio: React.FC = () => {
       </header>
 
       <section className="projects">
-        <ul className="filter-list">
+        {/* <ul className="filter-list">
           <li className="filter-item">
             <button className="active" data-filter-btn>
               All
@@ -37,9 +91,9 @@ const Portfolio: React.FC = () => {
           <li className="filter-item">
             <button data-filter-btn>Web development</button>
           </li>
-        </ul>
+        </ul> */}
 
-        <div className="filter-select-box">
+        {/* <div className="filter-select-box">
           <button className="filter-select" data-select>
             <div className="select-value" data-selecct-value>
               Select category
@@ -66,125 +120,25 @@ const Portfolio: React.FC = () => {
               <button data-select-item>Web development</button>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <ul className="project-list">
-          <li className="project-item active" data-filter-item data-category="web development">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage1} alt="finance" loading="lazy" />
-              </figure>
-              <h3 className="project-title">Finance</h3>
-              <p className="project-category">Web development</p>
-            </a>
-          </li>
-
-          <li className="project-item active" data-filter-item data-category="web development">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage2} alt="orizon" loading="lazy" />
-              </figure>
-              <h3 className="project-title">Orizon</h3>
-              <p className="project-category">Web development</p>
-            </a>
-          </li>
-
-          <li className="project-item active" data-filter-item data-category="web design">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage3} alt="fundo" loading="lazy" />
-              </figure>
-              <h3 className="project-title">Fundo</h3>
-              <p className="project-category">Web design</p>
-            </a>
-          </li>
-
-          <li className="project-item active" data-filter-item data-category="applications">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage4} alt="brawlhalla" loading="lazy" />
-              </figure>
-              <h3 className="project-title">Brawlhalla</h3>
-              <p className="project-category">Applications</p>
-            </a>
-          </li>
-
-          <li className="project-item active" data-filter-item data-category="web design">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage5} alt="dsm." loading="lazy" />
-              </figure>
-              <h3 className="project-title">DSM.</h3>
-              <p className="project-category">Web design</p>
-            </a>
-          </li>
-
-          <li className="project-item active" data-filter-item data-category="web design">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage6} alt="metaspark" loading="lazy" />
-              </figure>
-              <h3 className="project-title">MetaSpark</h3>
-              <p className="project-category">Web design</p>
-            </a>
-          </li>
-
-          <li className="project-item active" data-filter-item data-category="web development">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage7} alt="summary" loading="lazy" />
-              </figure>
-              <h3 className="project-title">Summary</h3>
-              <p className="project-category">Web development</p>
-            </a>
-          </li>
-
-          <li className="project-item active" data-filter-item data-category="applications">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage8} alt="task manager" loading="lazy" />
-              </figure>
-              <h3 className="project-title">Task Manager</h3>
-              <p className="project-category">Applications</p>
-            </a>
-          </li>
-
-          <li className="project-item active" data-filter-item data-category="web development">
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <AiOutlineEye />
-                </div>
-                <img src={ProjectImage9} alt="arrival" loading="lazy" />
-              </figure>
-              <h3 className="project-title">Arrival</h3>
-              <p className="project-category">Web development</p>
-            </a>
-          </li>
+          {
+            datInfoPortifolio.map((item, index) => (
+              <li className="project-item active" data-filter-item data-category="web development">
+                <a href="#">
+                  <figure className="project-img">
+                    <div className="project-item-icon-box">
+                      <AiOutlineEye />
+                    </div>
+                    <img src={item.imasge} alt="finance" loading="lazy" />
+                  </figure>
+                  <h3 className="project-title">{item.title}</h3>
+                  <p className="project-category">{item.area}</p>
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </section>
     </article>

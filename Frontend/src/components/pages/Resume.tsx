@@ -1,12 +1,108 @@
 // src/components/pages/Resume.tsx
-import React from "react";
+import React, { useState } from "react";
 import { MdBook } from "react-icons/md";
-
+import "../../assets/css/style.css"
 const Resume: React.FC = () => {
+
+  const characterLimit = 100;
+
+  const dataInfoExperience = [
+    {
+      title: "Desenvolvedor de Software Fullstack Pleno - Upvalue Solutions",
+      date: "",
+      descripition: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+    },
+    {
+      title: "Desenvolvedor de Software Fullstack Júnior - Upvalue Solutions",
+      date: "",
+      descripition: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+    },
+    {
+      title: "Desenvolvedor de Software AI - Companhia Industrial Cimento Apodi",
+      date: "",
+      descripition: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+    },
+    {
+      title: "Trainee Ciência de Dado - Companhia Industrial Cimento Apodi",
+      date: "",
+      descripition: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+    }
+  ];
+
+  const dataInfoFormação = [
+    {
+      title: "Mestrado em Lógica e Inteligência Artificial - UFC",
+      date: "",
+      descripition: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ..."
+    },
+    {
+      title: "Bacharel em Ciência da Computação - UFC",
+      date: "",
+      descripition: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ..."
+    },
+    {
+      title: "Escola Normal Rural",
+      date: "",
+      descripition: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ..."
+    }
+  ];
+
+  const dataInfoSkills = [
+    {
+      title: "WebDesign",
+      percent: "80%",
+      experience: "",
+    },
+    {
+      title: "WebDesign",
+      percent: "10%",
+      experience: "",
+    },
+    {
+      title: "WebDesign",
+      percent: "60%",
+      experience: "",
+    },
+    {
+      title: "WebDesign",
+      percent: "100%",
+      experience: "",
+    }
+  ];
+
+  const renderDescription = (description: string) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const handleToggleExpand = () => {
+      setIsExpanded(!isExpanded);
+    };
+
+    if (description.length > characterLimit && !isExpanded) {
+      return (
+        <>
+          {description.substring(0, characterLimit)}...
+          <span className="expand-text" onClick={handleToggleExpand}>
+            Ver +
+          </span>
+        </>
+      );
+    }
+    return (
+      <>
+        {description}
+        {description.length > characterLimit && (
+          <span className="expand-text" onClick={handleToggleExpand}>
+            Ver -
+          </span>
+        )}
+      </>
+    );
+  };
+
   return (
     <article className="resume active" data-page="resume">
       <header>
-        <h2 className="h2 article-title">Resume</h2>
+        <h2 className="h2 article-title">Resumo</h2>
       </header>
 
       <section className="timeline">
@@ -14,36 +110,16 @@ const Resume: React.FC = () => {
           <div className="icon-box">
             <MdBook />
           </div>
-          <h3 className="h3">Education</h3>
+          <h3 className="h3">Experiência</h3>
         </div>
-
         <ol className="timeline-list">
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">University school of the arts</h4>
-            <span>2007 — 2008</span>
-            <p className="timeline-text">
-              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas
-              molestias exceptur.
-            </p>
-          </li>
-
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">New york academy of art</h4>
-            <span>2006 — 2007</span>
-            <p className="timeline-text">
-              Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-              omnis..
-            </p>
-          </li>
-
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">High school of art and design</h4>
-            <span>2002 — 2004</span>
-            <p className="timeline-text">
-              Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-              magni dolores eos.
-            </p>
-          </li>
+          {dataInfoExperience.map((item, index) => (
+            <li className="timeline-item" key={index}>
+              <h4 className="h4 timeline-item-title">{item.title} </h4>
+              <span>{item.date}</span>
+              <p className="timeline-text">{renderDescription(item.descripition)}</p>
+            </li>
+          ))}
         </ol>
       </section>
 
@@ -52,81 +128,34 @@ const Resume: React.FC = () => {
           <div className="icon-box">
             <MdBook />
           </div>
-          <h3 className="h3">Experience</h3>
+          <h3 className="h3">Formação</h3>
         </div>
 
         <ol className="timeline-list">
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Creative director</h4>
-            <span>2015 — Present</span>
-            <p className="timeline-text">
-              Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas
-              molestias exceptur.
-            </p>
-          </li>
-
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Art director</h4>
-            <span>2013 — 2015</span>
-            <p className="timeline-text">
-              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas
-              molestias exceptur.
-            </p>
-          </li>
-
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Web designer</h4>
-            <span>2010 — 2013</span>
-            <p className="timeline-text">
-              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas
-              molestias exceptur.
-            </p>
-          </li>
+          {dataInfoFormação.map((item, index) => (
+            <li className="timeline-item" key={index}>
+              <h4 className="h4 timeline-item-title">{item.title}</h4>
+              <span>{item.date}</span>
+              <p className="timeline-text">{renderDescription(item.descripition)}</p>
+            </li>
+          ))}
         </ol>
       </section>
 
       <section className="skill">
         <h3 className="h3 skills-title">My skills</h3>
         <ul className="skills-list content-card">
-          <li className="skills-item">
-            <div className="title-wrapper">
-              <h5 className="h5">Web design</h5>
-              <data value="80">80%</data>
-            </div>
-            <div className="skill-progress-bg">
-              <div className="skill-progress-fill" style={{ width: "80%" }}></div>
-            </div>
-          </li>
-
-          <li className="skills-item">
-            <div className="title-wrapper">
-              <h5 className="h5">Graphic design</h5>
-              <data value="70">70%</data>
-            </div>
-            <div className="skill-progress-bg">
-              <div className="skill-progress-fill" style={{ width: "70%" }}></div>
-            </div>
-          </li>
-
-          <li className="skills-item">
-            <div className="title-wrapper">
-              <h5 className="h5">Branding</h5>
-              <data value="90">90%</data>
-            </div>
-            <div className="skill-progress-bg">
-              <div className="skill-progress-fill" style={{ width: "90%" }}></div>
-            </div>
-          </li>
-
-          <li className="skills-item">
-            <div className="title-wrapper">
-              <h5 className="h5">WordPress</h5>
-              <data value="50">50%</data>
-            </div>
-            <div className="skill-progress-bg">
-              <div className="skill-progress-fill" style={{ width: "50%" }}></div>
-            </div>
-          </li>
+          {dataInfoSkills.map((item, index) => (
+            <li className="skills-item" key={index}>
+              <div className="title-wrapper">
+                <h5 className="h5">{item.title}</h5>
+                <data value="80">{item.percent}</data>
+              </div>
+              <div className="skill-progress-bg">
+                <div className="skill-progress-fill" style={{ width: item.percent }}></div>
+              </div>
+            </li>
+          ))}
         </ul>
       </section>
     </article>
