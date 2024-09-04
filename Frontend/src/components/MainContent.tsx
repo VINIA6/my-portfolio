@@ -3,13 +3,12 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
-import BlogPostPage from "./pages/BlogPost"; // Corrigido o nome do import
-import Contact from "./pages/Contact";
+import BlogPostPage from "./pages/BlogPost"; 
 
-// Defina os dados do blog fora do componente para reutilização
-const dataBlog = [
-  //... dados do blog que você já possui
-];
+// // Defina os dados do blog fora do componente para reutilização
+// const dataBlog = [
+//   //... dados do blog que você já possui
+// ];
 
 const MainContent: React.FC = () => {
   // Defina as páginas disponíveis e seus componentes correspondentes

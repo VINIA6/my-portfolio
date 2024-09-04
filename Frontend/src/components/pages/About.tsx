@@ -1,6 +1,4 @@
-// src/components/pages/About.tsx
 import React from "react";
-import DesignIcon from "../../assets/images/icon-design.svg";
 import DevIcon from "../../assets/images/icon-dev.svg";
 import AppIcon from "../../assets/images/icon-app.svg";
 import Logo1 from "../../assets/images/titan.png";

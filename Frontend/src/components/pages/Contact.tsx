@@ -1,6 +1,6 @@
-// src/components/pages/Contact.tsx
+
 import React, { useState } from "react";
-import { FaPaperPlane } from "react-icons/fa"; // Importing the correct icon
+import { FaPaperPlane } from "react-icons/fa"; 
 
 const Contact: React.FC = () => {
   const [formValues, setFormValues] = useState<{ fullname: string; email: string; message: string }>({
@@ -13,8 +13,6 @@ const Contact: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
-
-    // Check if all fields are filled to enable the button
     setFormValid(formValues.fullname !== "" && formValues.email !== "" && formValues.message !== "");
   };
 

@@ -1,4 +1,3 @@
-// src/components/pages/Portfolio.tsx
 import React from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import { datInfoPortifolio } from "../../mocks/port";

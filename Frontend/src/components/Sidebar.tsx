@@ -1,11 +1,9 @@
-// src/components/Sidebar.tsx
 import React, { useState } from "react";
 import { MdMailOutline, MdPhoneAndroid, MdCalendarToday, MdLocationOn } from "react-icons/md";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import AvatarImage from "../assets/images/_MG_9949_3.jpg";
 
-// You can define any necessary types here
-// For example, if you have props, define them as interfaces
+
 interface SidebarProps {
   // Add prop definitions if needed
 }

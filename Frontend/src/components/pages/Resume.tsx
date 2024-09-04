@@ -1,4 +1,4 @@
-// src/components/pages/Resume.tsx
+
 import React, { useState } from "react";
 import { MdBook } from "react-icons/md";
 import "../../assets/css/style.css"
