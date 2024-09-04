@@ -13,7 +13,7 @@ const Portfolio: React.FC = () => {
       <section className="projects">
         <ul className="project-list">
           {
-            datInfoPortifolio.map((item, index) => (
+            datInfoPortifolio.map((item) => (
               <li className="project-item active" data-filter-item data-category="web development">
                 <a href={`${item.link}`}>
                   <figure className="project-img">
