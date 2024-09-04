@@ -2,85 +2,28 @@
 import React, { useState } from "react";
 import { MdBook } from "react-icons/md";
 import "../../assets/css/style.css"
+import { dataInfoExperience, dataInfoFormação, dataInfoSkills } from "../../mocks/resume";
 const Resume: React.FC = () => {
 
   const characterLimit = 100;
 
-  const dataInfoExperience = [
-    {
-      title: "Desenvolvedor de Software Fullstack Pleno - Upvalue Solutions",
-      date: "",
-      descripition: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-    },
-    {
-      title: "Desenvolvedor de Software Fullstack Júnior - Upvalue Solutions",
-      date: "",
-      descripition: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-    },
-    {
-      title: "Desenvolvedor de Software AI - Companhia Industrial Cimento Apodi",
-      date: "",
-      descripition: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-    },
-    {
-      title: "Trainee Ciência de Dado - Companhia Industrial Cimento Apodi",
-      date: "",
-      descripition: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-    }
-  ];
-
-  const dataInfoFormação = [
-    {
-      title: "Mestrado em Lógica e Inteligência Artificial - UFC",
-      date: "",
-      descripition: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ..."
-    },
-    {
-      title: "Bacharel em Ciência da Computação - UFC",
-      date: "",
-      descripition: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ..."
-    },
-    {
-      title: "Escola Normal Rural",
-      date: "",
-      descripition: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ..."
-    }
-  ];
-
-  const dataInfoSkills = [
-    {
-      title: "WebDesign",
-      percent: "80%",
-      experience: "",
-    },
-    {
-      title: "WebDesign",
-      percent: "10%",
-      experience: "",
-    },
-    {
-      title: "WebDesign",
-      percent: "60%",
-      experience: "",
-    },
-    {
-      title: "WebDesign",
-      percent: "100%",
-      experience: "",
-    }
-  ];
 
   const renderDescription = (description: string) => {
     const [isExpanded, setIsExpanded] = useState(false);
-
+  
     const handleToggleExpand = () => {
       setIsExpanded(!isExpanded);
     };
-
+  
     if (description.length > characterLimit && !isExpanded) {
       return (
         <>
-          {description.substring(0, characterLimit)}...
+          <div
+            dangerouslySetInnerHTML={{
+              __html: description.substring(0, characterLimit),
+            }}
+          />
+          ...
           <span className="expand-text" onClick={handleToggleExpand}>
             Ver +
           </span>
@@ -89,7 +32,7 @@ const Resume: React.FC = () => {
     }
     return (
       <>
-        {description}
+        <div dangerouslySetInnerHTML={{ __html: description }} />
         {description.length > characterLimit && (
           <span className="expand-text" onClick={handleToggleExpand}>
             Ver -

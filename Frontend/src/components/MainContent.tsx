@@ -26,7 +26,7 @@ const MainContent: React.FC = () => {
 
   const handlePageChange = (page: keyof typeof pages) => {
     setActivePage(page);
-    setSelectedBlogPost(null); // Para garantir que a página do post seja fechada ao mudar de página
+    setSelectedBlogPost(null);
   };
 
   return (

@@ -23,14 +23,18 @@ const About: React.FC = () => {
 
       <section className="about-text">
         <p>
-          Sou um Cientista da Computação apaixonado por resolver problemas complexos por meio da programação e sempre me mantenho atualizado com as últimas tendências e tecnologias. Trabalhar em equipe sempre foi uma grande oportunidade para aprender e compartilhar conhecimentos, exaltando assim a importância do trabalho orientado a equipes. Desenvolvi aplicativos tanto em equipe quanto individualmente, do zero à produção, sempre discutindo e trocando informações sobre pesquisas e novas tecnologias e aplicando-as em desafios do mundo real.
+          Sou um Cientista da Computação movido pela curiosidade e pela paixão de transformar ideias em soluções reais. Programação para mim não é apenas uma ferramenta, mas um meio de desbravar desafios complexos e trazer inovação para o mundo. Mantenho-me sempre à frente das últimas tendências tecnológicas, buscando constantemente maneiras de aplicar essas inovações em projetos que fazem a diferença.
         </p>
         <p>
-          Atualmente, estou cursando mestrado em Lógica e Inteligência Artificial, uma área que me entusiasma e motiva pela busca incessante por conhecimento. Acredito que a combinação de habilidades técnicas e soft skills é crucial para a entrega de resultados precisos, otimizando processos, economizando tempo na tomada de decisões, realizando controle industrial e avaliando a qualidade de produtos.
+          Minha jornada é marcada pela colaboração em equipe, onde vejo cada projeto como uma oportunidade de aprender e compartilhar conhecimento. Já desenvolvi soluções completas, desde a concepção até a produção, em ambientes que incentivam o diálogo e a troca de ideias. Acredito que é na convergência dessas experiências que encontramos as respostas para os desafios mais intrigantes.
         </p>
         <p>
-          A comunicação é, para mim, a habilidade mais importante em uma equipe de sucesso, e estou sempre disposto a combinar minhas experiências técnicas com minhas habilidades interpessoais para entregar resultados excepcionais.
+          O que realmente me impulsiona é a combinação de lógica e criatividade. Em meu mestrado em Lógica e Inteligência Artificial, encontro o equilíbrio entre teoria e prática, onde cada algoritmo é uma nova possibilidade de otimizar processos e inovar em soluções. Para mim, a tecnologia é uma arte, e gosto de criar soluções que não apenas funcionem, mas que também sejam elegantes e eficazes.
         </p>
+        <p>
+          Valorizo a comunicação como a base de qualquer equipe bem-sucedida. Para mim, é a ponte que conecta ideias a resultados. Estou sempre pronto para unir minhas competências técnicas com minha capacidade de engajar e colaborar, buscando, acima de tudo, superar expectativas e entregar soluções que realmente impactam.
+        </p>
+
       </section>
 
       <section className="service">
@@ -96,7 +100,7 @@ const About: React.FC = () => {
               <h4 className="h4 service-item-title">Mobile apps</h4>
 
               <p className="service-item-text">
-              Desenvolvimento profissional de aplicativos para iOS e Android.
+                Desenvolvimento profissional de aplicativos para iOS e Android.
               </p>
             </div>
 
@@ -130,12 +134,12 @@ const About: React.FC = () => {
           </li>
           <li className="clients-item">
             <a href="#">
-              <img src={Logo2} alt="client logo" title="Cimento Apodi"/>
+              <img src={Logo2} alt="client logo" title="Cimento Apodi" />
             </a>
           </li>
           <li className="clients-item">
             <a href="#">
-              <img src={Logo1} alt="client logo" title="Titan Ciment"/>
+              <img src={Logo1} alt="client logo" title="Titan Ciment" />
             </a>
           </li>
           <li className="clients-item">
@@ -145,7 +149,7 @@ const About: React.FC = () => {
           </li>
           <li className="clients-item">
             <a href="#">
-              <img src={Logo7} alt="client logo" title="CIE Durametal"/>
+              <img src={Logo7} alt="client logo" title="CIE Durametal" />
             </a>
           </li>
 
