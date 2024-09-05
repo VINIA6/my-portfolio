@@ -572,6 +572,7 @@ main {
   box-shadow: var(--shadow-2);
   z-index: 1;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .service-item:hover {

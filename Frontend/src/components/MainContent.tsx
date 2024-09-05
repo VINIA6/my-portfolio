@@ -4,28 +4,32 @@ import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/BlogPost"; 
-
-// // Defina os dados do blog fora do componente para reutilização
-// const dataBlog = [
-//   //... dados do blog que você já possui
-// ];
+import AboutSkill from "./pages/AboutSkills";
 
 const MainContent: React.FC = () => {
-  // Defina as páginas disponíveis e seus componentes correspondentes
   const [activePage, setActivePage] = useState<keyof typeof pages>("sobre");
   const [selectedBlogPost, setSelectedBlogPost] = useState<any>(null);
+  const [skillTitle, setSkillTitle] = useState<string | null>(null);
 
   const pages = {
-    sobre: <About />,
+    sobre: <About onDomainClick={(title: string) => handleDomainClick(title)} />, // Passa o callback para About
     resumo: <Resume />,
     portifólio: <Portfolio />,
     blog: <Blog onBlogPostClick={setSelectedBlogPost} />,
-    // contato: <Contact />,
+    aboutSkills: skillTitle ? <AboutSkill title={skillTitle} /> : null, // Renderiza AboutSkill com a prop title
   };
 
   const handlePageChange = (page: keyof typeof pages) => {
+    if (page === "sobre") {
+      setSkillTitle(null); // Volta para About
+    }
     setActivePage(page);
     setSelectedBlogPost(null);
+  };
+
+  const handleDomainClick = (title: string) => {
+    setSkillTitle(title); // Atualiza o título da skill ao clicar no domínio
+    setActivePage("aboutSkills"); // Alterna para a página de AboutSkill
   };
 
   return (

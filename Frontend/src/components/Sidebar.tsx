@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdMailOutline, MdPhoneAndroid, MdCalendarToday, MdLocationOn } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import AvatarImage from "../assets/images/_MG_9949_3.jpg";
 
 
@@ -77,13 +77,13 @@ const Sidebar: React.FC<SidebarProps> = () => {
           <div className="separator"></div>
           <ul className="social-list">
             <li className="social-item">
-              <a href="#" className="social-link">
-                <FaFacebookF />
+              <a href="https://www.linkedin.com/in/vinia6/" className="social-link">
+                <FaLinkedin/>
               </a>
             </li>
             <li className="social-item">
-              <a href="#" className="social-link">
-                <FaTwitter />
+              <a href="https://github.com/VINIA6" className="social-link">
+                <FaGithub/>
               </a>
             </li>
             <li className="social-item">

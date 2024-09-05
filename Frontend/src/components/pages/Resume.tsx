@@ -10,11 +10,11 @@ const Resume: React.FC = () => {
 
   const renderDescription = (description: string) => {
     const [isExpanded, setIsExpanded] = useState(false);
-  
+
     const handleToggleExpand = () => {
       setIsExpanded(!isExpanded);
     };
-  
+
     if (description.length > characterLimit && !isExpanded) {
       return (
         <>
@@ -83,23 +83,6 @@ const Resume: React.FC = () => {
             </li>
           ))}
         </ol>
-      </section>
-
-      <section className="skill">
-        <h3 className="h3 skills-title">My skills</h3>
-        <ul className="skills-list content-card">
-          {dataInfoSkills.map((item, index) => (
-            <li className="skills-item" key={index}>
-              <div className="title-wrapper">
-                <h5 className="h5">{item.title}</h5>
-                <data value="80">{item.percent}</data>
-              </div>
-              <div className="skill-progress-bg">
-                <div className="skill-progress-fill" style={{ width: item.percent }}></div>
-              </div>
-            </li>
-          ))}
-        </ul>
       </section>
     </article>
   );

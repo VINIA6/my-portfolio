@@ -24,7 +24,7 @@ export const dataInfoExperience = [
         `
     },
     {
-        title: "Trainee Ciência de Dado - Companhia Industrial Cimento Apodi",
+        title: "Trainee Ciência de Dados - Companhia Industrial Cimento Apodi",
         date: "out de 2020 - out 2021",
         descripition:
             `
@@ -40,13 +40,18 @@ export const dataInfoFormação = [
         descripition: ""
     },
     {
-        title: "Bacharel em Ciência da Computação - UFC",
-        date: "2019 - 2023",
+        title: "Desenvolvedor de Software Backend - IFood",
+        date: "2023",
         descripition: ""
     },
     {
-        title: "Escola Normal Rural",
-        date: "2015",
+        title: "Certificação Google Project Management",
+        date: "2023",
+        descripition: ""
+    },
+    {
+        title: "Bacharel em Ciência da Computação - UFC",
+        date: "2019 - 2023",
         descripition: ""
     }
 ];
